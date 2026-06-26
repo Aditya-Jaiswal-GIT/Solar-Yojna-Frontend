@@ -682,28 +682,137 @@ a { text-decoration: none; color: inherit; }
 .footer-copy { font-size: 12px; color: rgba(139,147,181,.55); }
 
 /* ---------------------------------------------------------------
-   Responsive
+   Responsive — Tablet & Small Desktop (≤ 1200px)
+--------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .lp-nav-inner { gap: 24px; }
+    .lp-links { gap: 22px; }
+}
+
+/* ---------------------------------------------------------------
+   Responsive — Tablet (≤ 1024px)
 --------------------------------------------------------------- */
 @media (max-width: 1024px) {
-    .lp-hero { grid-template-columns: 1fr; min-height: auto; padding-top: calc(var(--nav-height) + 60px); padding-bottom: 60px; }
-    .hero-visuals { height: 300px; order: -1; }
+    .lp-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: calc(var(--nav-height) + 60px);
+        padding-bottom: 60px;
+        gap: 24px;
+    }
+    .hero-visuals {
+        height: 300px;
+        order: -1;
+    }
     .hero-title { font-size: clamp(32px, 8vw, 52px); }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .lp-features { padding: 72px 0; }
+    .lp-how { padding: 60px 0 80px; }
+    .fc-1 { top: 6%; left: 0%; }
+    .fc-2 { bottom: 10%; left: -2%; }
+    .fc-3 { top: 22%; right: 0%; }
 }
 
+/* ---------------------------------------------------------------
+   Responsive — Mobile landscape / tablet portrait (≤ 768px)
+--------------------------------------------------------------- */
 @media (max-width: 768px) {
+    :root { --nav-height: 64px; }
+
+    .lp-nav-inner {
+        width: calc(100% - 32px);
+        gap: 0;
+    }
     .lp-links, .cta-btn { display: none; }
     .mobile-menu-btn { display: flex; }
-    .features-grid { grid-template-columns: 1fr; }
-    .steps-grid { flex-direction: column; }
+
+    .lp-hero {
+        width: calc(100% - 32px);
+        padding-top: calc(var(--nav-height) + 40px);
+        padding-bottom: 48px;
+        text-align: center;
+    }
+    .lp-hero-inner { align-items: center; }
+    .hero-badge { margin: 0 auto 18px; }
+    .hero-subtitle { margin: 0 auto 28px; max-width: 100%; }
+    .hero-actions { justify-content: center; }
+    .hero-trust { justify-content: center; }
+
+    .hero-visuals { display: none; }
+
+    .stats-band { padding: 36px 0; }
+    .stats-inner {
+        width: calc(100% - 32px);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .stat-item { padding: 16px 12px; }
+
+    .lp-features {
+        width: calc(100% - 32px);
+        padding: 56px 0;
+    }
+    .features-grid { grid-template-columns: 1fr; gap: 14px; }
+    .section-sub { margin-bottom: 32px; }
+
+    .lp-how {
+        width: calc(100% - 32px);
+        padding: 48px 0 64px;
+    }
+    .steps-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 32px;
+    }
+    .step-card { min-width: 100%; max-width: 100%; }
     .step-arrow { transform: rotate(90deg); }
-    .float-card { display: none; }
+
+    .lp-cta-banner { padding: 56px 16px; }
+    .cta-banner-inner { width: 100%; }
+
+    .lp-footer { padding: 36px 16px; }
+    .footer-links { gap: 16px; }
 }
 
-@media (max-width: 480px) {
-    .stats-inner { grid-template-columns: 1fr 1fr; }
-    .hero-actions { flex-direction: column; align-items: flex-start; }
+/* ---------------------------------------------------------------
+   Responsive — Mobile portrait (≤ 600px)
+--------------------------------------------------------------- */
+@media (max-width: 600px) {
+    .btn-primary, .btn-ghost {
+        width: 100%;
+        justify-content: center;
+    }
+    .hero-actions { flex-direction: column; width: 100%; }
     .hero-trust { gap: 8px; }
     .trust-divider { display: none; }
+
+    .section-title { font-size: clamp(24px, 7vw, 36px); }
+    .section-sub { font-size: 14px; }
+}
+
+/* ---------------------------------------------------------------
+   Responsive — Small mobile (≤ 480px)
+--------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .stats-inner { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .stat-num { font-size: 24px; }
+    .stat-label { font-size: 12px; }
+    .stat-item { padding: 14px 8px; }
+
+    .feat-card { padding: 20px; }
+    .feat-icon { font-size: 26px; margin-bottom: 12px; }
+    .feat-card h3 { font-size: 16px; }
+
+    .step-card { padding: 22px 18px; }
+    .step-num { font-size: 34px; }
+    .step-card h3 { font-size: 16px; }
+
+    .lp-cta-banner h2 { font-size: clamp(22px, 6vw, 32px); }
+    .lp-cta-banner p { font-size: 14px; }
+    .cta-banner-sun { font-size: 40px; }
+
+    .footer-links { gap: 12px; }
+    .footer-links a { font-size: 12px; }
 }

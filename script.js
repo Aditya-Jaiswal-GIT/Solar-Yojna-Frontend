@@ -68,12 +68,22 @@ applyTheme(getPreferredTheme());
 // Navigation & Views Controller
 // ===================================================================
 
+// All nav buttons (sidebar + mobile bottom nav)
+const mobileNavBtns = document.querySelectorAll(".mobile-nav-btn[data-view]");
+const allNavBtns = [...navBtns, ...mobileNavBtns];
+
 function switchView(viewId) {
     views.forEach(view => {
         view.classList.toggle("active", view.id === viewId);
     });
 
+    // Sync sidebar nav buttons
     navBtns.forEach(btn => {
+        btn.classList.toggle("active", btn.getAttribute("data-view") === viewId);
+    });
+
+    // Sync mobile bottom nav buttons
+    mobileNavBtns.forEach(btn => {
         btn.classList.toggle("active", btn.getAttribute("data-view") === viewId);
     });
 
@@ -85,11 +95,19 @@ function switchView(viewId) {
     }
 }
 
-// Bind navigation clicks
+// Bind sidebar navigation clicks
 navBtns.forEach(btn => {
     btn.addEventListener("click", () => {
         const viewId = btn.getAttribute("data-view");
-        switchView(viewId);
+        if (viewId) switchView(viewId);
+    });
+});
+
+// Bind mobile bottom nav clicks
+mobileNavBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const viewId = btn.getAttribute("data-view");
+        if (viewId) switchView(viewId);
     });
 });
 
