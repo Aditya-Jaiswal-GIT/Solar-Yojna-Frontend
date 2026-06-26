@@ -1,0 +1,303 @@
+/* ===================================================================
+   about.css — Additional styles unique to the About page
+   Imports landing.css for shared base styles.
+=================================================================== */
+
+/* ---------------------------------------------------------------
+   About Hero
+--------------------------------------------------------------- */
+.about-hero {
+    position: relative;
+    z-index: 1;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: calc(var(--nav-height) + 60px) 24px 80px;
+    overflow: hidden;
+}
+.about-hero-inner {
+    max-width: 740px;
+    animation: rise .7s var(--ease) both;
+}
+.about-hero-title {
+    font-size: clamp(34px, 5.5vw, 60px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+.about-hero-sub {
+    font-size: clamp(15px, 1.5vw, 18px);
+    color: var(--secondary);
+    line-height: 1.65;
+    max-width: 56ch;
+    margin: 0 auto;
+}
+.about-hero-sun {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: .18;
+    pointer-events: none;
+}
+.about-sun .sun-inner { font-size: 120px; width: 200px; height: 200px; }
+.about-sun { width: 200px; height: 200px; }
+.about-sun::before { inset: -30px; }
+.about-sun::after  { inset: -55px; }
+
+/* ---------------------------------------------------------------
+   About Sections base
+--------------------------------------------------------------- */
+.about-section {
+    position: relative;
+    z-index: 1;
+    padding: 90px 0;
+}
+.about-section:nth-child(even) {
+    background: linear-gradient(180deg, rgba(255,255,255,.02), transparent);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.about-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------
+   Mission
+--------------------------------------------------------------- */
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+.mission-text { display: flex; flex-direction: column; }
+.mission-text p {
+    font-size: 15px;
+    color: var(--secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+.mission-values {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+.value-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: var(--radius-md);
+    background: var(--glass);
+    border: 1px solid var(--border);
+    transition: transform .25s var(--ease), border-color .25s;
+}
+.value-item:hover { transform: translateX(6px); border-color: rgba(255,181,71,.3); }
+.value-icon {
+    font-size: 22px;
+    background: var(--sun-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.value-item strong { display: block; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.value-item p { font-size: 13px; color: var(--secondary); line-height: 1.5; margin: 0; }
+
+/* Mission Visual */
+.mission-visual {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.visual-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 22px;
+    background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 16px 36px -20px rgba(0,0,0,.6);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: transform .25s var(--ease);
+}
+.visual-card:hover { transform: scale(1.04); }
+.visual-card i {
+    font-size: 20px;
+    background: var(--sun-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.vc-1 { top: 5%; left: 5%; animation: float-alt1 5s ease-in-out infinite; }
+.vc-2 { bottom: 8%; left: 0%; animation: float-alt2 6s ease-in-out infinite; }
+.vc-3 { top: 30%; right: 0%; animation: float-alt1 5.5s .3s ease-in-out infinite; }
+.vc-4 { bottom: 28%; right: 4%; animation: float-alt2 5s .6s ease-in-out infinite; }
+
+@keyframes float-alt1 {
+    0%,100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+}
+@keyframes float-alt2 {
+    0%,100% { transform: translateY(0) rotate(1deg); }
+    50% { transform: translateY(8px) rotate(-1deg); }
+}
+
+
+/* ---------------------------------------------------------------
+   Scheme Timeline
+--------------------------------------------------------------- */
+.scheme-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 48px;
+    position: relative;
+}
+.scheme-timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--gold), var(--ember));
+    opacity: .3;
+}
+.tl-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 0 24px 0;
+    position: relative;
+}
+.tl-marker {
+    flex-shrink: 0;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: var(--sun-grad);
+    box-shadow: var(--shadow-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #1a1206;
+    z-index: 1;
+}
+.tl-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    flex: 1;
+}
+.tl-item:last-child .tl-content { border-bottom: none; }
+.tl-content strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    background: var(--sun-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.tl-content p {
+    font-size: 14px;
+    color: var(--secondary);
+    line-height: 1.65;
+}
+
+/* ---------------------------------------------------------------
+   FAQ Accordion
+--------------------------------------------------------------- */
+.faq-list {
+    max-width: 780px;
+    margin: 48px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.faq-item {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: border-color .25s;
+}
+.faq-item.open { border-color: rgba(255,181,71,.35); }
+.faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 22px;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: color .2s;
+}
+.faq-q i {
+    font-size: 12px;
+    color: var(--secondary);
+    flex-shrink: 0;
+    transition: transform .35s var(--ease), color .2s;
+}
+.faq-item.open .faq-q { color: var(--gold); }
+.faq-item.open .faq-q i { transform: rotate(180deg); color: var(--gold); }
+.faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .45s var(--ease), padding .35s;
+    padding: 0 22px;
+}
+.faq-item.open .faq-a {
+    max-height: 300px;
+    padding: 0 22px 20px;
+}
+.faq-a p {
+    font-size: 14px;
+    color: var(--secondary);
+    line-height: 1.7;
+}
+.faq-a a { color: var(--gold); text-decoration: underline; }
+
+/* ---------------------------------------------------------------
+   Active nav link on About page
+--------------------------------------------------------------- */
+.active-link {
+    color: var(--gold) !important;
+}
+
+/* ---------------------------------------------------------------
+   Responsive
+--------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .mission-grid { grid-template-columns: 1fr; gap: 48px; }
+    .mission-visual { height: 280px; }
+    .about-hero-sun { display: none; }
+}
+@media (max-width: 600px) {
+    .about-section { padding: 60px 0; }
+    .scheme-timeline::before { left: 20px; }
+    .tl-marker { width: 40px; height: 40px; font-size: 15px; }
+}

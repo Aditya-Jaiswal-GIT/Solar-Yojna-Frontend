@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Yojna AI — PM Surya Ghar Scheme Assistant</title>
+    <meta name="description"
+        content="Solar Yojna AI gives instant, accurate guidance on PM Surya Ghar: Muft Bijli Yojana. Check eligibility, calculate subsidies and get step-by-step application help powered by AI.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+
+    <!-- Ambient Blobs -->
+    <div class="ambient" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+    </div>
+
+    <!-- ============================================================
+     NAV
+============================================================ -->
+    <header class="lp-nav">
+        <div class="lp-nav-inner">
+            <a href="landing.html" class="lp-brand" aria-label="Solar Yojna AI Home">
+                <span class="brand-icon">☀️</span>
+                <span class="brand-name">Solar Yojna AI</span>
+            </a>
+            <nav class="lp-links" aria-label="Main Navigation">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#stats">Impact</a>
+                <a href="about.html" class="about-link">About</a>
+            </nav>
+            <a href="index.html" class="cta-btn" id="nav-launch-btn">
+                Launch App <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#stats">Impact</a>
+            <a href="about.html">About</a>
+            <a href="index.html" class="mobile-cta">Launch App</a>
+        </div>
+    </header>
+
+    <!-- ============================================================
+     HERO
+============================================================ -->
+    <section class="lp-hero" id="hero">
+        <div class="lp-hero-inner">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Government Scheme Assistant · Powered by AI
+            </div>
+
+            <h1 class="hero-title">
+                Unlock Solar Subsidies<br>
+                <span class="gradient-text">Instantly with AI</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Navigate <strong>PM Surya Ghar: Muft Bijli Yojana</strong> with ease.
+                Check eligibility, calculate your subsidy, find DISCOM vendors and get
+                step-by-step application guidance — all in one intelligent assistant.
+            </p>
+
+            <div class="hero-actions">
+                <a href="index.html" class="btn-primary" id="hero-launch-btn">
+                    <i class="fa-solid fa-solar-panel"></i> Start for Free
+                </a>
+                <a href="#how-it-works" class="btn-ghost">
+                    See How it Works <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+
+            <div class="hero-trust">
+                <span class="trust-item"><i class="fa-solid fa-shield-halved"></i> Govt. Data Sources</span>
+                <span class="trust-divider">·</span>
+                <span class="trust-item"><i class="fa-solid fa-bolt"></i> Instant Answers</span>
+                <span class="trust-divider">·</span>
+                <span class="trust-item"><i class="fa-solid fa-lock"></i> No Data Stored</span>
+            </div>
+        </div>
+
+        <!-- Floating visual cards -->
+        <div class="hero-visuals" aria-hidden="true">
+            <div class="sun-core">
+                <div class="sun-inner">☀️</div>
+            </div>
+            <div class="float-card fc-1">
+                <span class="fc-emoji">💰</span>
+                <div>
+                    <strong>Up to ₹78,000</strong>
+                    <small>Central Subsidy</small>
+                </div>
+            </div>
+            <div class="float-card fc-2">
+                <span class="fc-emoji">⚡</span>
+                <div>
+                    <strong>300 Units/Month</strong>
+                    <small>Free Electricity</small>
+                </div>
+            </div>
+            <div class="float-card fc-3">
+                <span class="fc-emoji">📄</span>
+                <div>
+                    <strong>5 Documents</strong>
+                    <small>Simple Process</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     STATS BAND
+============================================================ -->
+    <section class="stats-band" id="stats">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-num" data-target="1300000">0</span>
+                <span class="stat-label">Households Enrolled</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num" data-target="78000" data-prefix="₹" data-suffix="+">0</span>
+                <span class="stat-label">Max Subsidy Available</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num" data-target="10">0</span>
+                <span class="stat-label">Year Payback Period</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num" data-target="500">0</span>
+                <span class="stat-label">Approved Vendors</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     FEATURES
+============================================================ -->
+    <section class="lp-features" id="features">
+        <div class="section-label">What We Offer</div>
+        <h2 class="section-title">Everything You Need to Go Solar</h2>
+        <p class="section-sub">Our AI assistant covers the complete PM Surya Ghar journey from eligibility to
+            installation.</p>
+
+        <div class="features-grid">
+            <div class="feat-card feat-card--large">
+                <div class="feat-icon">🔍</div>
+                <h3>Eligibility Checker</h3>
+                <p>Instantly find out if you qualify for PM Surya Ghar subsidies based on your electricity connection,
+                    roof type, and income bracket.</p>
+                <div class="feat-tag">Most Popular</div>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🧮</div>
+                <h3>Subsidy Calculator</h3>
+                <p>Calculate your exact central and state subsidies based on system size and your DISCOM.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">📋</div>
+                <h3>Document Checklist</h3>
+                <p>Get a personalised list of documents required for your specific situation with submission tips.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🏪</div>
+                <h3>Vendor Guidance</h3>
+                <p>Learn how to find and evaluate empanelled solar vendors registered on the national portal.</p>
+            </div>
+            <div class="feat-card">
+                <div class="feat-icon">🗓️</div>
+                <h3>Step-by-Step Process</h3>
+                <p>Follow a clear 7-step application walkthrough from portal registration to bank credit.</p>
+            </div>
+            <div class="feat-card feat-card--highlight">
+                <div class="feat-icon">🤖</div>
+                <h3>AI-Powered Chat</h3>
+                <p>Ask questions in plain language. Our AI understands complex policy queries and responds in seconds —
+                    in English or Hindi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     HOW IT WORKS
+============================================================ -->
+    <section class="lp-how" id="how-it-works">
+        <div class="section-label">Simple Process</div>
+        <h2 class="section-title">How Solar Yojna AI Works</h2>
+
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h3>Ask Your Question</h3>
+                <p>Type or speak your question about PM Surya Ghar eligibility, documents, subsidies, or application
+                    process.</p>
+            </div>
+            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h3>AI Analyses & Responds</h3>
+                <p>Our RAG-based AI searches verified government sources and policy documents to generate a precise,
+                    up-to-date answer.</p>
+            </div>
+            <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h3>Take Action</h3>
+                <p>Use the personalised guidance to apply on the national portal, contact your DISCOM, or arrange vendor
+                    visits.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     CTA BANNER
+============================================================ -->
+    <section class="lp-cta-banner">
+        <div class="cta-banner-inner">
+            <div class="cta-banner-sun">☀️</div>
+            <h2>Ready to Slash Your Electricity Bill?</h2>
+            <p>Join thousands of households who got clear, instant answers about PM Surya Ghar Yojana through Solar
+                Yojna AI.</p>
+            <a href="index.html" class="btn-primary btn-lg" id="banner-launch-btn">
+                <i class="fa-solid fa-rocket"></i> Launch Solar Yojna AI
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================================
+     FOOTER
+============================================================ -->
+    <footer class="lp-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="brand-icon">☀️</span>
+                <span class="brand-name">Solar Yojna AI</span>
+            </div>
+            <p class="footer-tagline">An AI assistant for PM Surya Ghar: Muft Bijli Yojana. Not an official government
+                portal.</p>
+            <nav class="footer-links">
+                <a href="landing.html">Home</a>
+                <a href="index.html">App</a>
+                <a href="about.html">About</a>
+                <a href="https://pmsuryaghar.gov.in/#/" target="_blank" rel="noopener">Official Portal ↗</a>
+            </nav>
+            <p class="footer-copy">© 2025 Solar Yojna AI. Built with ❤️ to make solar accessible to every Indian
+                household.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ---------------------------------------------------------------
+        // Counter animation for stats
+        // ---------------------------------------------------------------
+        function animateCounter(el) {
+            const target = parseInt(el.dataset.target, 10);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const duration = 1800;
+            const step = Math.ceil(duration / 60);
+            let current = 0;
+            const increment = target / (duration / step);
+
+            const timer = setInterval(() => {
+                current = Math.min(current + increment, target);
+                const formatted = prefix + Math.floor(current).toLocaleString('en-IN') + suffix;
+                el.textContent = formatted;
+                if (current >= target) clearInterval(timer);
+            }, step);
+        }
+
+        // Trigger on scroll into view
+        const statNums = document.querySelectorAll('.stat-num');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNums.forEach(el => observer.observe(el));
+
+        // ---------------------------------------------------------------
+        // Mobile menu toggle
+        // ---------------------------------------------------------------
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+            mobileMenuBtn.querySelector('i').className =
+                mobileMenu.classList.contains('open')
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars';
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                mobileMenuBtn.querySelector('i').className = 'fa-solid fa-bars';
+            });
+        });
+
+        // ---------------------------------------------------------------
+        // Sticky nav shadow on scroll
+        // ---------------------------------------------------------------
+        window.addEventListener('scroll', () => {
+            document.querySelector('.lp-nav').classList.toggle('scrolled', window.scrollY > 30);
+        });
+    </script>
+
+</body>
+
+</html>

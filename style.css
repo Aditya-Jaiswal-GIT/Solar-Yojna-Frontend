@@ -1379,3 +1379,24 @@ textarea:disabled{
     border-color: rgba(255,181,71,.4);
     transform: translateY(-1px);
 }
+
+/* ---------------------------------------------------------------
+   Sidebar — Logo as anchor & About link at bottom
+--------------------------------------------------------------- */
+a.logo {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    justify-content: flex-start; /* keep existing layout */
+}
+
+.about-page-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
